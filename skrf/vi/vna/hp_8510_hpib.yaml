@@ -1,0 +1,29 @@
+# HP 8510C Network Analyzer and Operating and Programming Manual - Chapter 13 https://literature.cdn.keysight.com/litweb/pdf/08510-90281.pdf
+# HP 8510 Quick Reference Guide https://literature.cdn.keysight.com/litweb/pdf/08510-90292.pdf
+
+DEFAULTS:
+  csv: False
+  returns: str
+  strip_outer_quotes: True
+  kwarg_value: ""
+COMMAND_TREE:
+  CORR: {name: meas_correction_state, set: <onoff=ON>, query: "?"}
+  OUTPDATA: {name: data, query: ""}
+  S11: {name: select_s11, set: ""}
+  S21: {name: select_s21, set: ""}
+  S12: {name: select_s12, set: ""}
+  S22: {name: select_s22, set: ""}
+  EDITLIST: {name: freq_list_edit, set: ""}
+  CLEL: {name: freq_list_clear, set: ""}
+  SADD: {name: freq_list_segment_add, set: ""}
+  STAR: {name: freq_list_segment_start, set: <freq>}
+  STOP: {name: freq_list_segment_end, set: <freq>}
+  POIN: {name: freq_list_segment_points, set: <n_points=1>}
+  SDON: {name: freq_list_segment_done, set: ""}
+  EDITDONE: {name: freq_list_done, set: ""}
+  LISFREQ: {name: freq_list_sweep_mode, set: ""}
+  SING: {name: single_sweep_mode, set: ""}
+  CONT: {name: continous_sweep_mode, set: ""}
+  AVER: {name: averaging_on, query: "?", returns: bool}
+  NUMS: {name: frequency_list_segments, query="?", returns: int}
+  PARA: {name: parameter, query="?", returns: str}
